@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strong Mama Camp - Poster</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .poster {
+            background: white;
+            max-width: 1200px;
+            width: 100%;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .poster::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 72px;
+            font-weight: 900;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+        
+        .subtitle {
+            font-size: 28px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .tagline {
+            font-size: 22px;
+            color: #7f8c8d;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            margin: 40px 0;
+        }
+        
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-title::before {
+            content: '';
+            width: 6px;
+            height: 40px;
+            background: linear-gradient(180deg, #ff6b6b, #feca57);
+            border-radius: 3px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .feature-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+            border-left: 4px solid #667eea;
+        }
+        
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .pricing-tier {
+            background: white;
+            border: 3px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .pricing-tier:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+        
+        .pricing-tier.premium {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+        }
+        
+        .tier-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .tier-price {
+            font-size: 32px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .tier-description {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .tier-description ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .tier-description li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .tier-description li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .schedule {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .schedule-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            color: #2c3e50;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .schedule-month {
+            font-size: 20px;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .schedule-theme {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: 400;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            color: white;
+        }
+        
+        .cta-text {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .cta-subtext {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #feca57 0%, #feca57 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.4em;
+            background-position: 0 88%;
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .poster {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .poster {
+                padding: 30px 20px;
+            }
+            
+            .title {
+                font-size: 48px;
+            }
+            
+            .subtitle {
+                font-size: 20px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .pricing-container,
+            .schedule-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="header">
+            <h1 class="title">💪 STRONG MAMA CAMP</h1>
+            <div class="subtitle">6 Weeks • 12 Sessions • Starts January</div>
+            <div class="tagline">Because strong moms make strong families.</div>
+            <div class="description">
+                This is fitness that fits your life — quick, effective workouts built for busy moms who want to feel confident, energized, and strong.
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">🔸 WHAT YOU GET</h2>
+            <div class="features-grid">
+                <div class="feature-item">12 expert-led small-group sessions (2x/week)</div>
+                <div class="feature-item">Total-body strength, stability & mobility training</div>
+                <div class="feature-item">Supportive "Strong Mama" community</div>
+                <div class="feature-item">Optional nutrition + accountability coaching</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">💰 PROGRAM OPTIONS</h2>
+            <div class="pricing-container">
+                <div class="pricing-tier">
+                    <div class="tier-name">Standard Tier</div>
+                    <div class="tier-price">$179–$229</div>
+                    <div class="tier-description">
+                        <ul>
+                            <li>Workouts + community</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="pricing-tier premium">
+                    <div class="tier-name">Premium Tier</div>
+                    <div class="tier-price">$249–$299</div>
+                    <div class="tier-description">
+                        <ul>
+                            <li>Everything in Standard</li>
+                            <li>+ Nutrition plan</li>
+                            <li>+ Weekly check-ins</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="pricing-tier">
+                    <div class="tier-name">VIP Add-On</div>
+                    <div class="tier-price">+$100</div>
+                    <div class="tier-description">
+                        <ul>
+                            <li>1:1 goal consult</li>
+                            <li>Branded gear</li>
+                            <li>Early access perks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">🗓 2025 CAMPS</h2>
+            <div class="schedule">
+                <p style="font-size: 18px; font-weight: 600; color: #2c3e50; margin-bottom: 15px;">
+                    Each camp runs 6 weeks with 2 weeks off for recovery + pop-up classes
+                </p>
+                <div class="schedule-grid">
+                    <div class="schedule-item">
+                        <div class="schedule-month">January</div>
+                        <div class="schedule-theme">New Year Strong</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-month">March</div>
+                        <div class="schedule-theme">Spring Reset</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-month">May</div>
+                        <div class="schedule-theme">Summer Strong</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-month">July</div>
+                        <div class="schedule-theme">Peak Performance</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-month">September/October</div>
+                        <div class="schedule-theme">Fall Kickstart</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <div class="cta-text">Join the movement. Be a Strong Mama.</div>
+            <div class="cta-subtext">💥 Spots are limited — sign up today!</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>[Insert location or link]</span>
+                </div>
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span>[Insert contact info or registration URL]</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
