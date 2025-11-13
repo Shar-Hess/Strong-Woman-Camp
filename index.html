@@ -279,6 +279,29 @@
             gap: 10px;
         }
         
+        .register-btn {
+            display: inline-block;
+            padding: 20px 50px;
+            background: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif;
+            border: 3px solid #ffffff;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .register-btn:hover {
+            background: transparent;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+        }
+        
         .highlight {
             background: #000000;
             color: #ffffff;
@@ -423,14 +446,15 @@
         <div class="cta-section">
             <div class="cta-text">Join the movement. Be a Strong Mama.</div>
             <div class="cta-subtext">💥 Spots are limited — sign up today!</div>
-            <div class="contact-info">
+            <a href="registration.html" class="register-btn">Register Now</a>
+            <div class="contact-info" style="margin-top: 30px;">
                 <div class="contact-item">
                     <span>📍</span>
-                    <span>[Insert location or link]</span>
+                    <span>180 Fitness Fieldhouse</span>
                 </div>
                 <div class="contact-item">
                     <span>📧</span>
-                    <span>[Insert contact info or registration URL]</span>
+                    <a href="registration.html" style="color: #ffffff; text-decoration: underline; font-weight: 700;">Register Now</a>
                 </div>
             </div>
         </div>
