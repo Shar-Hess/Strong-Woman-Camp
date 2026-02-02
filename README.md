@@ -1,6 +1,6 @@
-# Strong Mama Camp Poster
+# Strong Woman Camp Poster
 
-This is a web-based poster for Strong Mama Camp that can be hosted on GitHub Pages.
+This is a web-based poster for Strong Woman Camp that can be hosted on GitHub Pages.
 
 ## Setup Instructions
 
