@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strong Woman Camp - Registration</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #1a1a1a;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: #ffffff;
+            max-width: 800px;
+            width: 100%;
+            padding: 60px;
+            border-radius: 0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: #000000;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 30px;
+        }
+        
+        .brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 900;
+            color: #000000;
+            letter-spacing: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .brand-tagline {
+            font-size: 14px;
+            color: #666666;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: #000000;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #444444;
+            font-weight: 600;
+        }
+        
+        .form-section {
+            margin-top: 40px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 8px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #000000;
+            border-radius: 0;
+            font-size: 16px;
+            font-family: 'Open Sans', sans-serif;
+            background: #ffffff;
+            color: #000000;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #000000;
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .radio-option input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #000000;
+        }
+        
+        .radio-option label {
+            margin: 0;
+            text-transform: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background: #000000;
+            color: #ffffff;
+            border: none;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+        }
+        
+        .submit-btn:hover {
+            background: #333333;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .back-link a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+        
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+        
+        .required {
+            color: #ff0000;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .title {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="brand">180 FITNESS</div>
+            <div class="brand-tagline">FITNESS ON YOUR TIME</div>
+            <h1 class="title">💪 STRONG WOMAN CAMP</h1>
+            <div class="subtitle">Registration Form</div>
+        </div>
+        
+        <!-- 
+            TO SET UP GOOGLE FORMS:
+            1. Go to https://forms.google.com/ and create a new form
+            2. Add all the registration fields (see GOOGLE_FORMS_SETUP.md for details)
+            3. Click "Send" → Copy the form link
+            4. Replace "YOUR_GOOGLE_FORM_URL" below with your actual Google Form URL
+        -->
+        <div class="form-section" style="text-align: center;">
+            <div style="font-size: 24px; font-weight: 700; color: #000000; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px;">
+                Ready to Register?
+            </div>
+            <p style="font-size: 18px; color: #444444; margin-bottom: 40px; line-height: 1.8;">
+                Click the button below to complete your registration form. You'll be redirected to our secure registration form where you can submit all your information.
+            </p>
+            
+            <a href="https://forms.gle/q4UCaFsVkDzUmsZa6" id="googleFormLink" class="submit-btn" style="text-decoration: none; display: inline-block; width: auto; padding: 20px 60px;">
+                Go to Registration Form →
+            </a>
+        </div>
+        
+        <div class="back-link">
+            <a href="index.html">← Back to Camp Information</a>
+        </div>
+    </div>
+    
+    <script>
+        // Google Form is configured and ready to use!
+        // The link will redirect users directly to the Google Form
+    </script>
+</body>
+</html>
+

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strong Woman Camp - Poster</title>
+    <title>Strong Mama Camp - Poster</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap');
         
@@ -15,7 +15,7 @@
         
         body {
             font-family: 'Open Sans', sans-serif;
-            background: #1a1a1a;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 40px 20px;
             min-height: 100vh;
             display: flex;
@@ -24,12 +24,12 @@
         }
         
         .poster {
-            background: #ffffff;
+            background: white;
             max-width: 1200px;
             width: 100%;
             padding: 60px;
-            border-radius: 0;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -40,47 +40,45 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 6px;
-            background: #000000;
+            height: 8px;
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
         }
         
         .header {
             text-align: center;
             margin-bottom: 50px;
-            border-bottom: 2px solid #000000;
-            padding-bottom: 30px;
         }
         
         .title {
             font-family: 'Montserrat', sans-serif;
             font-size: 72px;
             font-weight: 900;
-            color: #000000;
+            color: #2c3e50;
             margin-bottom: 15px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: -2px;
             line-height: 1.1;
         }
         
         .subtitle {
             font-size: 28px;
             font-weight: 700;
-            color: #000000;
+            color: #667eea;
             margin-bottom: 20px;
-            letter-spacing: 3px;
+            letter-spacing: 1px;
         }
         
         .tagline {
             font-size: 22px;
-            color: #333333;
+            color: #7f8c8d;
             font-weight: 600;
             margin-bottom: 10px;
         }
         
         .description {
             font-size: 18px;
-            color: #444444;
-            line-height: 1.8;
+            color: #555;
+            line-height: 1.6;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -93,12 +91,19 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 32px;
             font-weight: 800;
-            color: #000000;
+            color: #2c3e50;
             margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 3px solid #000000;
-            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-title::before {
+            content: '';
+            width: 6px;
+            height: 40px;
+            background: linear-gradient(180deg, #ff6b6b, #feca57);
+            border-radius: 3px;
         }
         
         .features-grid {
@@ -109,14 +114,13 @@
         }
         
         .feature-item {
-            background: #f8f8f8;
-            padding: 25px;
-            border-radius: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            border-radius: 12px;
             font-size: 16px;
             font-weight: 600;
-            color: #000000;
-            border-left: 5px solid #000000;
-            border: 2px solid #000000;
+            color: #2c3e50;
+            border-left: 4px solid #667eea;
         }
         
         .pricing-container {
@@ -127,71 +131,44 @@
         }
         
         .pricing-tier {
-            background: #ffffff;
-            border: 3px solid #000000;
-            border-radius: 0;
+            background: white;
+            border: 3px solid #e0e0e0;
+            border-radius: 15px;
             padding: 30px;
             transition: all 0.3s ease;
             position: relative;
-            cursor: pointer;
-            text-decoration: none;
-            display: block;
-            color: inherit;
         }
         
         .pricing-tier:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border-color: #0066FF;
-        }
-        
-        .pricing-tier:visited {
-            color: inherit;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
         }
         
         .pricing-tier.premium {
-            border-width: 4px;
-            background: #0066FF;
-            color: #ffffff;
-            border-color: #0066FF;
-        }
-        
-        .pricing-tier.premium:hover {
-            border-color: #0052CC;
-        }
-        
-        .pricing-tier.premium .tier-name,
-        .pricing-tier.premium .tier-price,
-        .pricing-tier.premium .tier-description {
-            color: #ffffff;
-        }
-        
-        .pricing-tier.premium .tier-description li::before {
-            color: #ffffff;
+            border-color: #667eea;
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
         }
         
         .tier-name {
             font-family: 'Montserrat', sans-serif;
             font-size: 24px;
             font-weight: 800;
-            color: #000000;
+            color: #2c3e50;
             margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
         
         .tier-price {
-            font-size: 36px;
-            font-weight: 900;
-            color: #000000;
+            font-size: 32px;
+            font-weight: 700;
+            color: #667eea;
             margin-bottom: 15px;
-            font-family: 'Montserrat', sans-serif;
         }
         
         .tier-description {
             font-size: 15px;
-            color: #333333;
-            line-height: 1.8;
+            color: #555;
+            line-height: 1.6;
         }
         
         .tier-description ul {
@@ -209,17 +186,16 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: #000000;
+            color: #667eea;
             font-weight: bold;
             font-size: 18px;
         }
         
         .schedule {
-            background: #f8f8f8;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             padding: 30px;
-            border-radius: 0;
+            border-radius: 15px;
             margin-top: 20px;
-            border: 2px solid #000000;
         }
         
         .schedule-grid {
@@ -230,52 +206,47 @@
         }
         
         .schedule-item {
-            background: #ffffff;
+            background: white;
             padding: 20px;
-            border-radius: 0;
+            border-radius: 10px;
             text-align: center;
             font-weight: 600;
-            color: #000000;
-            border: 2px solid #000000;
+            color: #2c3e50;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         
         .schedule-month {
             font-size: 20px;
-            color: #000000;
+            color: #667eea;
             margin-bottom: 5px;
-            font-weight: 700;
-            text-transform: uppercase;
         }
         
         .schedule-theme {
             font-size: 14px;
-            color: #666666;
+            color: #7f8c8d;
             font-weight: 400;
         }
         
         .cta-section {
             text-align: center;
             margin-top: 50px;
-            padding: 50px 40px;
-            background: #0066FF;
-            border-radius: 0;
-            color: #ffffff;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            color: white;
         }
         
         .cta-text {
-            font-size: 32px;
-            font-weight: 900;
+            font-size: 28px;
+            font-weight: 700;
             margin-bottom: 15px;
             font-family: 'Montserrat', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 2px;
         }
         
         .cta-subtext {
             font-size: 20px;
             margin-bottom: 30px;
             opacity: 0.95;
-            font-weight: 600;
         }
         
         .contact-info {
@@ -293,33 +264,11 @@
             gap: 10px;
         }
         
-        .register-btn {
-            display: inline-block;
-            padding: 20px 50px;
-            background: #ffffff;
-            color: #000000;
-            text-decoration: none;
-            font-weight: 900;
-            font-size: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-family: 'Montserrat', sans-serif;
-            border: 3px solid #ffffff;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .register-btn:hover {
-            background: transparent;
-            color: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
-        }
-        
         .highlight {
-            background: #0066FF;
-            color: #ffffff;
-            padding: 2px 6px;
+            background: linear-gradient(120deg, #feca57 0%, #feca57 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.4em;
+            background-position: 0 88%;
         }
         
         .emoji {
@@ -364,75 +313,69 @@
 </head>
 <body>
     <div class="poster">
-        <div style="text-align: center; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #e0e0e0;">
-            <div style="font-family: 'Montserrat', sans-serif; font-size: 36px; font-weight: 900; color: #000000; letter-spacing: 5px;">180 FITNESS</div>
-            <div style="font-size: 14px; color: #666666; margin-top: 5px; letter-spacing: 2px;">FITNESS ON YOUR TIME</div>
-        </div>
         <div class="header">
             <h1 class="title">💪 180 STRONG WOMEN</h1>
             <div class="subtitle">12 Sessions • Your transformation starts now</div>
             <div class="tagline">Because strong women build strong communities.</div>
             <div class="description">
-                Welcome to fitness that fits YOUR life! Join us for quick, effective workouts designed especially for busy women who want to feel confident, energized, and strong. You've got this, and we're here to support you every step of the way!
+                This is fitness that fits your life — quick, effective workouts built for busy moms who want to feel confident, energized, and strong.
             </div>
         </div>
         
         <div class="section">
-            <h2 class="section-title">WHAT YOU GET</h2>
+            <h2 class="section-title">🔸 WHAT YOU GET</h2>
             <div class="features-grid">
-                <div class="feature-item">12 expert-led small-group sessions</div>
-                <div class="feature-item">Total-body strength, stability & mobility training - Feel amazing in your own skin</div>
-                <div class="feature-item">Supportive "Strong Women" community - Connect, share, and grow together</div>
-                <div class="feature-item">Optional nutrition + accountability coaching - We're here to help you succeed</div>
+                <div class="feature-item">12 expert-led small-group sessions (2x/week)</div>
+                <div class="feature-item">Total-body strength, stability & mobility training</div>
+                <div class="feature-item">Supportive "Strong Mama" community</div>
+                <div class="feature-item">Optional nutrition + accountability coaching</div>
             </div>
         </div>
         
         <div class="section">
-            <h2 class="section-title">PROGRAM OPTIONS</h2>
-            <p style="font-size: 16px; color: #666666; margin-bottom: 20px; text-align: center; font-weight: 600;">Click on each Tier for details</p>
+            <h2 class="section-title">💰 PROGRAM OPTIONS</h2>
             <div class="pricing-container">
-                <a href="standard-tier.html" class="pricing-tier">
+                <div class="pricing-tier">
                     <div class="tier-name">Standard Tier</div>
-                    <div class="tier-price">$309</div>
+                    <div class="tier-price">$179–$229</div>
                     <div class="tier-description">
                         <ul>
                             <li>Workouts + community</li>
                         </ul>
                     </div>
-                    <div style="margin-top: 15px; font-size: 14px; color: #666666; font-weight: 600;">Click to learn more →</div>
-                </a>
+                </div>
                 
-                <a href="premium-tier.html" class="pricing-tier premium">
+                <div class="pricing-tier premium">
                     <div class="tier-name">Premium Tier</div>
-                    <div class="tier-price">$399</div>
+                    <div class="tier-price">$249–$299</div>
                     <div class="tier-description">
                         <ul>
                             <li>Everything in Standard</li>
-                            <li>+ Nutrition guidance & weekly check-in conversation</li>
+                            <li>+ Nutrition plan</li>
+                            <li>+ Weekly check-ins</li>
                         </ul>
                     </div>
-                    <div style="margin-top: 15px; font-size: 14px; color: #ffffff; font-weight: 600;">Click to learn more →</div>
-                </a>
+                </div>
                 
-                <a href="vip-tier.html" class="pricing-tier">
+                <div class="pricing-tier">
                     <div class="tier-name">VIP Add-On</div>
                     <div class="tier-price">+$100</div>
                     <div class="tier-description">
                         <ul>
                             <li>1:1 goal consult</li>
-                            <li>Branded gear (water bottle, hoodie, shirt, bag, and samples)</li>
+                            <li>Branded gear</li>
+                            <li>Early access perks</li>
                         </ul>
                     </div>
-                    <div style="margin-top: 15px; font-size: 14px; color: #666666; font-weight: 600;">Click to learn more →</div>
-                </a>
+                </div>
             </div>
         </div>
         
         <div class="section">
-            <h2 class="section-title">2026 CAMPS</h2>
+            <h2 class="section-title">🗓 2025 CAMPS</h2>
             <div class="schedule">
-                <p style="font-size: 18px; font-weight: 600; color: #000000; margin-bottom: 15px;">
-                    Most camps run 6 weeks with 2 weeks off for recovery + pop-up classes. March camp is a 4-week intensive program with 3 sessions a week. Join us when it works for you!
+                <p style="font-size: 18px; font-weight: 600; color: #2c3e50; margin-bottom: 15px;">
+                    Each camp runs 6 weeks with 2 weeks off for recovery + pop-up classes
                 </p>
                 <div class="schedule-grid">
                     <div class="schedule-item">
@@ -441,45 +384,38 @@
                     </div>
                     <div class="schedule-item">
                         <div class="schedule-month">March</div>
-                        <div class="schedule-theme">4 weeks • 3 sessions per week intensive</div>
-                        <div class="schedule-theme" style="margin-top: 5px; font-size: 13px; font-weight: 600;">Class starts March 2nd</div>
-                        <div class="schedule-theme" style="margin-top: 5px; font-size: 13px;">For March into Spring</div>
-                        <div class="schedule-theme" style="margin-top: 5px; font-size: 13px; font-weight: 600;">Monday, Wednesday, Friday • 6-7 PM</div>
+                        <div class="schedule-theme">Spring Reset</div>
                     </div>
                     <div class="schedule-item">
                         <div class="schedule-month">May</div>
                         <div class="schedule-theme">Summer Strong</div>
-                        <div class="schedule-theme">Starts May 4th</div>
                     </div>
                     <div class="schedule-item">
-                        <div class="schedule-month">Sept/October</div>
+                        <div class="schedule-month">July</div>
+                        <div class="schedule-theme">Peak Performance</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-month">September/October</div>
                         <div class="schedule-theme">Fall Kickstart</div>
-                        <div class="schedule-theme">Starts Sept 7th</div>
                     </div>
                 </div>
             </div>
         </div>
         
         <div class="cta-section">
-            <div class="cta-text">Join the movement. Be a Strong Woman.</div>
-            <div class="cta-subtext">💥 Spots are limited — reserve your spot today! We can't wait to meet you!</div>
-            <a href="registration.html" class="register-btn">Register Now</a>
-            <div class="contact-info" style="margin-top: 30px;">
+            <div class="cta-text">Join the movement. Be a Strong Mama.</div>
+            <div class="cta-subtext">💥 Spots are limited — sign up today!</div>
+            <div class="contact-info">
                 <div class="contact-item">
                     <span>📍</span>
-                    <a href="https://www.180fieldhouse.com/" target="_blank" style="color: #ffffff; text-decoration: underline; font-weight: 700;">180 Fitness Fieldhouse</a>
-                </div>
-                <div class="contact-item">
-                    <span>📞</span>
-                    <a href="tel:4355570678" style="color: #ffffff; text-decoration: underline; font-weight: 700;"> Text: 435-557-0678</a>
+                    <span>[Insert location or link]</span>
                 </div>
                 <div class="contact-item">
                     <span>📧</span>
-                    <a href="registration.html" style="color: #ffffff; text-decoration: underline; font-weight: 700;">Register Now</a>
+                    <span>[Insert contact info or registration URL]</span>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
-<!-- Rebuild 1770068427 -->

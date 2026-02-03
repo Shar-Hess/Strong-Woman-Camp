@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Tier - Strong Woman Camp</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #1a1a1a;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: #ffffff;
+            max-width: 900px;
+            width: 100%;
+            padding: 60px;
+            border-radius: 0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: #000000;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 30px;
+        }
+        
+        .brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 900;
+            color: #000000;
+            letter-spacing: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .brand-tagline {
+            font-size: 14px;
+            color: #666666;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        
+        .tier-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: #000000;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .tier-price {
+            font-size: 42px;
+            font-weight: 900;
+            color: #000000;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .content-section {
+            margin: 40px 0;
+        }
+        
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: #000000;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 3px solid #000000;
+            padding-bottom: 10px;
+        }
+        
+        .description {
+            font-size: 18px;
+            color: #444444;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .features-list li {
+            padding: 15px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.6;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .features-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #000000;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+            background: #0066FF;
+            border-radius: 0;
+            color: #ffffff;
+        }
+        
+        .cta-text {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #ffffff;
+            color: #0066FF;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif;
+            border: 3px solid #ffffff;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-btn:hover {
+            background: transparent;
+            color: #ffffff;
+        }
+        
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .back-link a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+        
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .tier-title {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="brand">180 FITNESS</div>
+            <div class="brand-tagline">FITNESS ON YOUR TIME</div>
+            <h1 class="tier-title">Standard Tier</h1>
+            <div class="tier-price">$309</div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title">What's Included</h2>
+            <p class="description">
+                The Standard Tier is perfect for women who want to get started on their fitness journey with expert guidance and a supportive community. This tier includes everything you need to build strength, confidence, and healthy habits.
+            </p>
+            
+            <ul class="features-list">
+                <li><strong>12 Expert-Led Small-Group Sessions</strong> - Two sessions per week for 6 weeks, led by experienced trainers who understand the unique needs of busy women</li>
+                <li><strong>Total-Body Strength Training</strong> - Comprehensive workouts focusing on strength, stability, and mobility to help you feel confident and capable</li>
+                <li><strong>Supportive "Strong Women" Community</strong> - Connect with other women on the same journey, share experiences, and build lasting friendships</li>
+                <li><strong>Small Group Setting</strong> - Intimate class sizes ensure personalized attention and a comfortable, non-intimidating environment</li>
+                <li><strong>Progressive Workout Program</strong> - Structured program that builds on your progress each week, designed specifically for busy women</li>
+                <li><strong>Facebook Community Chat</strong> - Join our exclusive Facebook community with current and past members of Strong Woman Camp groups for ongoing support, tips, and connection</li>
+            </ul>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title">Perfect For</h2>
+            <ul class="features-list">
+                <li>Women new to strength training or returning after a break</li>
+                <li>Busy women who want effective, time-efficient workouts</li>
+                <li>Anyone looking for a supportive community of like-minded women</li>
+                <li>Women ready to invest in their health and wellness</li>
+            </ul>
+        </div>
+        
+        <div class="cta-section">
+            <div class="cta-text">Ready to Get Started?</div>
+            <a href="registration.html" class="cta-btn">Register Now</a>
+        </div>
+        
+        <div class="back-link">
+            <a href="index.html">← Back to Camp Information</a>
+        </div>
+    </div>
+</body>
+</html>
